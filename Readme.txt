@@ -1,0 +1,1 @@
+docker run -e JAVA_OPTS="-Dspring.profiles.active=local1" -p 10001:10001 eruekaserver/springcloudlearn 
