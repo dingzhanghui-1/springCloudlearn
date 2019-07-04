@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <docker.image.prefix>eruekaServer</docker.image.prefix>
+        <docker.image.prefix>eruekaserver</docker.image.prefix>
     </properties>
 
     <dependencies>
@@ -64,7 +64,7 @@
             </plugin>
             <plugin>
                 <groupId>com.spotify</groupId>
-                <artifactId>Docker-maven-plugin</artifactId>
+                <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.11</version>
                 <configuration>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
