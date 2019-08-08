@@ -1,7 +1,6 @@
-package com.pretty.springcloudlearn.utils;
+package com.pretty.learn.utils;
 
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
