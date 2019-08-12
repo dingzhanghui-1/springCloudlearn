@@ -1,4 +1,4 @@
-package com.pretty.learn.data;
+package com.pretty.learn.model;
 
 public class VolatileData {
 
@@ -11,4 +11,16 @@ public class VolatileData {
     public void incrment() {
         ++count;
     }
+
+
+    public VolatileData(Integer count) {
+        this.count = count;
+    }
+
+    public VolatileData()
+    {
+        super();
+    }
+
+
 }

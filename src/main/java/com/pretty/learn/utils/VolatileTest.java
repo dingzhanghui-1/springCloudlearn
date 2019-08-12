@@ -3,7 +3,7 @@ package com.pretty.learn.utils;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import com.pretty.learn.data.VolatileData;
+import com.pretty.learn.model.VolatileData;
 
 import lombok.extern.slf4j.Slf4j;
 
