@@ -1,6 +1,6 @@
-package com.pretty.learn.utils;
+package com.pretty.utils;
 
-import com.pretty.learn.model.VolatileData;
+import com.pretty.model.VolatileData;
 
 import java.lang.reflect.Constructor;
 
@@ -13,7 +13,7 @@ public class ReflectUtil {
          * 根据类的class 属性
          * 根据对象的getClass() 方法
          */
-        Class modelClass = Class.forName("com.pretty.learn.model.VolatileData");
+        Class modelClass = Class.forName("com.pretty.model.VolatileData");
         Class modelClass1= VolatileData.class;
         VolatileData data = new VolatileData();
         Class modelclass = data.getClass();

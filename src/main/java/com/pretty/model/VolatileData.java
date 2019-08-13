@@ -1,4 +1,4 @@
-package com.pretty.learn.model;
+package com.pretty.model;
 
 public class VolatileData {
 
