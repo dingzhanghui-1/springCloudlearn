@@ -20,7 +20,7 @@ import java.lang.reflect.Method;
 @Slf4j
 public class CglibProxy  implements MethodInterceptor {
 
-    private Object target;
+    private  Object target;
 
     public CglibProxy(Object target) {
         this.target = target;
@@ -30,15 +30,16 @@ public class CglibProxy  implements MethodInterceptor {
     public Object getProxy()
     {
         Enhancer enhancer = new Enhancer();
-        enhancer.setSuperclass(target.getClass().getSuperclass());
+        enhancer.setSuperclass(target.getClass());
         enhancer.setCallback(this);
+        enhancer.setClassLoader(target.getClass().getClassLoader());
         return enhancer.create();
     }
 
-    @Override public Object intercept(Object target, Method method, Object[] objects, MethodProxy methodProxy)
+    @Override public Object intercept(Object obj, Method method, Object[] objects, MethodProxy methodProxy)
             throws Throwable {
         log.info("cglibProxy start");
-        Object object = methodProxy.invokeSuper(target, objects);
+        Object object = methodProxy.invokeSuper(obj, objects);
         log.info("cgkibProxy  end");
         return object;
     }

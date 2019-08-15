@@ -16,6 +16,8 @@ public class JdkProxyTest {
     {
         ISay Isay = new ISay();
         CglibProxy cglibProxy = new CglibProxy(Isay);
-        cglibProxy.getProxy()
+        Object proxy = cglibProxy.getProxy();
+        ((ISay)proxy).say();
+
     }
 }
